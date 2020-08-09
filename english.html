@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script type = "text/javascript">
+	function askForWords(words){
+		while(words.length!=0){
+			var n = parseInt(Math.random()*words.length);
+			var answer = prompt("Как переводится слово: "+words[n][0]);
+			if(answer==words[n][1]) {
+				alert("Верно!");
+				words.splice(n,1);
+			}else{
+				alert("Вы ошиблись!")
+			}		
+		}
+		alert("Вы выучили все слова!\nПереходим на следующий уровень" );	
+	}
+	var word = [
+		["food","еда"],
+		["bike","велосипед"],
+		["do","делать"],
+		["like","нравиться"],
+		["apple", "яблоко"],
+	];
+	var hardword = [
+		["chainsaw","бензопила"],
+		["milk","молоко"],
+		["shake","коктейль"],
+		["exelent","великолепно"],
+		["easy", "легко"],
+	];
+	askForWords(word);
+	askForWords(hardword);
+</script>

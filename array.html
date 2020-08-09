@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type = "text/javascript">
+	function compareAnswer(userAnswer, Answer){
+		if (userAnswer==Answer)
+			alert("Совершенно верно!");
+		else
+			alert("Вы ошиблись! Правильный ответ "+Answer);
+	}
+	function random(max){
+		return Math.round(Math.random()*max);
+	}
+	function randomArray(length){
+		var numbers = [];
+		for (var i=0; i<length; i++)
+			numbers.push(random(100));
+		return numbers;
+	}
+
+	var numbers = randomArray(5);
+	
+	alert("Запомните числа и их порядок"+numbers);
+	var userAnswer = +prompt("Каким было первое число?");
+	compareAnswer(userAnswer, numbers[0]);
+	var userAnswer = +prompt("Каким было последнее число?");
+	compareAnswer(userAnswer, numbers[numbers.length-1]);
+	var n = random(numbers.length-1);
+	var userAnswer = +prompt("Каким было "+(n+1)+" число?");
+	compareAnswer(userAnswer, numbers[n]);
+</script>
