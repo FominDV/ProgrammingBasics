@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script type = "text/javascript">
+	function Array(n){
+		var arr=[];
+		for(var i=0; i<n; i++){
+			arr.push(i+1);
+		}
+		return arr;
+	}
+	function Sum(arr){
+		var sum=0;
+		for(var i=0; i<arr.length; i++){
+			sum+=arr[i];
+		}
+		return sum;
+	}
+	function Max(arr){
+		var max = arr[0];
+		for (var i=1; i<arr.length; i++){
+			if(max<arr[i])
+				max=arr[i];
+		}
+		return max;
+	}
+	function Min(arr){
+		var min = arr[0];
+		for (var i=1; i<arr.length; i++){
+			if(min>arr[i])
+				min=arr[i];
+		}
+		return min;
+	}
+	function Even(arr){
+		var even = [];
+		for(var i=0; i<arr.length; i++){
+			if((arr[i]%2)==0)
+				even.push(arr[i]);
+		}
+		return even;
+	}
+	var arr = Array(10);
+	var sum = Sum(arr); 	
+	var max = Max(arr);
+	var min = Min(arr);
+	var even = Even(arr);
+</script>
