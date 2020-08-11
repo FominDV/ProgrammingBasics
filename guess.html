@@ -1,0 +1,23 @@
+<mata charset="utf-8">
+<script type="text/javascript">
+	var answer = parseInt(Math.random()*100);
+	var sumtrycount = 7;
+	for(var trycount = 1; trycount<=sumtrycount; trycount++){
+		var user = +prompt("Введите число от 0 до 100");
+		if(user==answer){
+			alert("Вы угадали! Поздравляем!");
+			break;
+		} else {
+			if(user<answer){
+				alert("число слишком маленькое. ");
+			} else{
+				alert("число слишком большое. ");
+			}
+			alert("осталось "+(sumtrycount-trycount)+" попыток");
+		}
+		if(trycount>sumtrycount){
+			alert("вы проиграли");
+			alert("было загадоно число " + answer);
+		}		
+	}
+</script>
