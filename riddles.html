@@ -1,0 +1,30 @@
+<meta charser="utf-8">
+<script type="text/javascript">
+	function ask(riddle){
+		var point = 0;
+		var answer = prompt(riddle[0]);
+		answer=answer.toLowerCase();
+		for(var i=1; i<riddle.length; i++){
+			if (answer==riddle[i]) {
+				alert("Это верный ответ!");
+				point = 1;
+			} 
+		}	
+		if(point!=0){
+			return point;
+		}else{
+			alert("Неверно!");
+			return point;
+		}
+	}
+	var point=0;
+	var riddles = [
+		["У этого зверя огромный рост,\nСзади у зверя — маленький хвост,\nСпереди у зверя — хвост большой.\nКто же это? Кто же это? Кто такой?\nНу, конечно, это он!\nНу, конечно, это …", "слон", "мамонт"],
+		["Все его зимой боятся -\nБольно может он кусаться.\nПрячьте уши, щёки, нос,\nВедь на улице ...", "мороз","холодок"],
+		["Все укутает дома\nВ белоснежный пух …", "зима", "метель"],
+		["Уж таков порядок древний —\nЯ давно живу в деревне,\nТам будильником служу,\nСвой курятник сторожу.", "петух", "петушок", "соловей"]
+	]
+	for(var i=0; i<riddles.length; i++)
+		point+=ask(riddles[i]);
+	alert("Верных ответов: "+point);
+</script>
